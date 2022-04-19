@@ -1,0 +1,110 @@
+@media (max-width: 60em) {
+    
+    body {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas: "header"
+                             "menu"
+                             "content"
+                             "footer";
+    }
+
+    body > #related {
+        display: none;
+    }
+}
+
+@media (max-width: 30em) {
+    
+    body > header > h2 {
+        display: none;
+    }
+
+    body > header > div {
+        position: static;
+    }
+
+    body > #news > article > header {
+        position: static;
+        width: 100%;
+        padding: 1em;
+    }
+
+    body > #news > article > header > h1 > a {
+        text-shadow: none;
+        color: black;
+        font-size: 1em;
+    }
+
+    body > #menu > ul {
+        opacity: 0;
+        height: 0em;
+        transition: opacity 1s, height 2s;
+    }
+
+    body > #menu > ul > li {
+        height: 0px;
+        max-height: 0px;
+        width: 0px;
+        max-width: 0px;
+        transition: height 2s, max-height 2s, width 2s, max-width 2s;
+    }
+
+    body > #menu > ul > li > a {
+        display: inline-block;
+        height: 0px;
+        max-height: 0px;
+        width: 0px;
+        max-width: 0px;
+        transition: height 2s, max-height 2s, width 2s, max-width 2s;
+    }
+
+    body > #menu > .hamburger {
+        display: block;
+        padding: 1em;
+        background-color: #2A2F33;    
+    }
+
+    :not(body > #menu > input:checked) + label:after {
+        content: "\2630";
+    }
+
+    body > #menu > input:checked + label:after {
+        content: "\2715";
+    }
+
+    body > #menu > input:checked ~ ul {
+        opacity: 1;
+        height: 21em;
+        display: block;
+        transition: opacity 1s, height 2s;
+    }
+
+    body > #menu > input:checked ~ ul > li,  body > #menu > input:checked ~ ul > li > a {
+        max-height: calc(21em/6);
+        height: calc(21em/6);
+        width: initial;
+        max-width: initial;
+        transition: height 2s, max-height 2s, width 2s, max-width 2s;
+    }
+
+    body > #menu > input:checked ~ ul > li {
+        border-top-width: 0;
+        border-top-style: none;
+        border-left-width: 4px;
+        border-left-style: solid;
+        text-align: start;
+        background-color: #EDEFF0
+    }
+
+    body > #menu > input:checked ~ ul > li:hover {
+        background-color: #2A2F33;  
+    }
+
+    body > #news > article:first-of-type {
+        margin-top: 0;
+    }
+}

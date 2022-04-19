@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <label>Name:
+            <input type="text" required name="name">
+        </label>
+        <label>Age:
+            <input type="radio" name="age" value="&lt;18">&lt;18
+            <input type="radio" name="age" value="19-35">19-35
+            <input type="radio" name="age" value="36-48">36-48
+            <input type="radio" name="age" value="&gt;49">&gt;49
+        </label>
+        <lable>Profession:
+            <input name="profession" list="professions" value="Discord mod">
+            <datalist id="professions">
+                <option>Firefighter</option>
+                <option selected>Discord mod</option>
+                <option>Policeman</option>
+                <option>CEO</option>
+            </datalist>
+        </lable>
+        <label>Country:
+            <select name="country" required>
+                <option value="usa">USA</option>
+                <option value="banana" selected>Banana</option>
+                <option value="tomato">Tomato</option>
+                <option value="apple">Apple</option>
+              </select>              
+        </label>
+        <label>Interests:
+            <input type="checkbox" name="interests" value="Sports">Sports
+            <input type="checkbox" name="interests" value="Technology">Technology
+            <input type="checkbox" name="interests" value="Crypto">Crypto
+            <input type="checkbox" name="interests" value="Books">Books
+        </label>
+        <label>How did you find about this site=?
+            <textarea name="bruh" id="" cols="30" rows="10"></textarea>
+        </label>
+        <button formaction="#" formmethod="get" type="submit">
+            Submit
+        </button>
+    </form>
+</body>
+</html>

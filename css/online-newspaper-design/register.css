@@ -1,0 +1,99 @@
+body {
+
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas: "header"
+                         "menu"
+                         "content"
+                         "footer";
+}
+
+body > #related {
+    display: none;
+}
+
+body > section#register {
+    padding: 1em;
+    margin: 150px auto;
+}
+
+body > section#register > h1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body > section#register > form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+body > section#register > form > * {
+    margin: 1em;
+}
+
+body > section#register > form > label > input {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+body > section#register > form > label::after {
+    content: "";
+}
+
+body > section#register > form > button {
+    width: 50%;
+    flex: 1 1 auto;
+}
+
+/**/
+
+body > section#login {
+    padding: 1em;
+    margin: 150px auto;
+}
+
+body > section#login > h1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body > section#login > form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+body > section#login > form > * {
+    margin: 1em;
+}
+
+body > section#login > form > label > input {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+body > section#login > form > label::after {
+    content: "";
+}
+
+body > section#login > form > button {
+    width: 50%;
+    flex: 1 1 auto;
+}

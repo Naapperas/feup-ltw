@@ -1,0 +1,93 @@
+body > section#news > article > section#comments {
+    padding: 1em;
+    font-family: "Lora";
+    font-style: bold;
+}
+
+body > section#news > article > section#comments > h1 {
+    font-family: "Lora";
+    font-style: bold;
+}
+
+body > section#news > article > section#comments > article.comment {
+    margin: 1em auto;
+    position: relative;
+}
+
+body > section#news > article > section#comments > article.comment > span.user {
+    display: inline;
+    font-style: italic;
+}
+
+body > section#news > article > section#comments > article.comment > span.user::after {
+    font-style: initial;
+    content: " said:";
+}
+
+body > section#news > article > section#comments > article.comment > span.date {
+    display: inline;
+    position: absolute;
+    right: 0;
+}
+
+body > section#news > article > section#comments > article.comment > p {
+    background-color: #EDEFF0;
+    padding: 1em;
+    margin: 1em auto;
+    font-family: "Lora";
+}
+
+body > section#news > article > section#comments > article.comment > p::before {
+    font-size: 2em;
+    font-family: "Lora";
+    content: "\201C";
+}
+
+body > section#news > article > section#comments > form {
+    display: grid;
+    background-color: #EDEFF0;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: "header header header header"
+                         "username username email email"
+                         "textArea textArea textArea textArea"
+                         "tmp tmp tmp submit";
+
+    padding: 1em;
+    gap: 1em;
+}
+
+body > section#news > article > section#comments > form > h2 {
+    grid-area: header;
+}
+
+body > section#news > article > section#comments > form > label:first-of-type {
+    grid-area: username;
+}
+
+body > section#news > article > section#comments > form > label:nth-of-type(2) {
+    grid-area: email;
+}
+
+body > section#news > article > section#comments > form > label:nth-of-type(3) {
+    grid-area: textArea;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+body > section#news > article > section#comments > form > label:nth-of-type(3) > textarea {
+    width: 85%;
+}
+
+body > section#news > article > section#comments > form > button {
+    grid-area: submit;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+}
+
+body > section#news > article > section#comments > form > label > input {
+    max-width: 16.5em;
+}

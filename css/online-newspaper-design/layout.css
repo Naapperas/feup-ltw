@@ -1,0 +1,72 @@
+body {
+    display: grid;
+
+    grid-template-columns: 3fr 1fr;
+
+    grid-template-areas: "header  header"
+                         "menu    aside"
+                         "content aside"
+                         "footer  footer";
+}
+
+body > #menu > ul {
+    display: flex;
+}
+
+body > #menu > ul > li {
+    /* flex-grow: 1; */
+    flex: 1 1 0px;
+}
+
+body > header {
+    grid-area: header;
+    position: relative;
+}
+
+body > header > h2 {
+    display: inline;
+}
+
+body > header > div {
+    display: inline;
+    position: absolute;
+    right: 2.5%;
+    top: 65%;
+}
+
+body > #menu {
+    grid-area: menu;
+    width: 100%
+}
+
+body > #related {
+    grid-area: aside;
+}
+
+body > #news {
+    grid-area: content;
+}
+
+body > #news > article {
+    position: relative;
+}
+
+body > #news > article > header {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+body > #news > article > footer {
+    display: flex;
+    justify-content: space-between; /* thx toino */
+    gap: 16px; /* thx toino */
+}
+
+.author {
+    flex: 1; /* thx toino */
+}
+
+body > footer {
+    grid-area: footer;
+}
